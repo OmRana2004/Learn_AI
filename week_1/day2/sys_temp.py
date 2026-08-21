@@ -13,11 +13,11 @@ client=Groq(api_key=my_api_key)
 
 model="openai/gpt-oss-120b"
 role="user"
-prompt="I Love You baby!"
+prompt="Suggest a name for my food company"
 #  SYSTEM
 message_system={
     "role": "system",
-    "content": "You are my strict Office colleague who is also my mannager"
+    "content": "You are a brand mannager suggest name for my food company. Name should be in one word. suggest one name only"
 }
 #  mesage me role and content
 message={
@@ -26,6 +26,9 @@ message={
 }
 
 messages=[message_system, message]
+#  Temperature by default is 0 meaning safe
+response=client.chat.completions.create(model=model, messages=messages, temperature=2)
+#  print (response)
+print('##############################')
 
-response=client.chat.completions.create(model=model, messages=messages)
 print(response.choices[0].message.content)
