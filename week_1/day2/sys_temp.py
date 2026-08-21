@@ -13,16 +13,16 @@ client=Groq(api_key=my_api_key)
 
 model="openai/gpt-oss-120b"
 role="user"
-content="I Love You baby!"
-
+prompt="I Love You baby!"
+#  SYSTEM
 message_system={
     "role": "system",
-    "content": "You are my loving girlfriend"
+    "content": "You are my strict Office colleague who is also my mannager"
 }
-
+#  mesage me role and content
 message={
     "role": role,
-    "content": content
+    "content": prompt
 }
 
 messages=[message_system, message]
