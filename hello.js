@@ -14,3 +14,8 @@
 // const value = 5 < 12 ? "NICE" : "NOT NICE";
 // console.log(value)
 
+const greeting = "I love You Baby";
+
+for (let i = 1; i<=20; i++) {
+    console.log(greeting)
+}
