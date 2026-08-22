@@ -18,13 +18,26 @@
 //     console.log(greeting)
 // }
 
+// const prompt = require("prompt-sync")();
+
+// const input = prompt("enter you age :- ");
+// const age = Number(input);
+
+// if (age >= 18) {
+//   console.log("You are eligible");
+// } else {
+//   console.log("You are not eligible");
+// }
+
 const prompt = require("prompt-sync")();
 
-const input = prompt("enter you age :- ");
-const age = Number(input);
+const input = prompt("enter your marks:- ");
+const marks = Number(input);
 
-if (age >= 18) {
-  console.log("You are eligible");
+if (marks>=90) {
+    console.log("A+")
+} else if (marks>=60) {
+    console.log("B+")
 } else {
-  console.log("You are not eligible");
+    console.log("FAIL")
 }
